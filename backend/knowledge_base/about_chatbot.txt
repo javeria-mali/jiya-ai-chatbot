@@ -1,0 +1,10 @@
+
+Jiya AI Chatbot is a full-stack AI chatbot project built using React, FastAPI, MongoDB, Groq, and Qdrant.
+
+The frontend provides a chat interface where users can register, log in, send messages, and manage their conversations.
+
+FastAPI handles API requests and authentication. MongoDB stores user accounts, conversations, and chat messages.
+
+Qdrant stores vector embeddings of knowledge-base documents. The chatbot can retrieve relevant information from these documents to help answer user questions.
+
+The project demonstrates authentication, persistent chat history, vector search, and Retrieval-Augmented Generation (RAG).

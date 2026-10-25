@@ -1,0 +1,26 @@
+
+Frequently Asked Questions
+
+Q: What is Jiya AI Chatbot?
+A: It is a full-stack AI chatbot application that combines a web interface, backend APIs, persistent chat history, and AI-generated responses.
+
+Q: Which technologies does the project use?
+A: React, Vite, FastAPI, Pydantic, MongoDB, Groq, Qdrant, and FastEmbed.
+
+Q: What is MongoDB used for?
+A: MongoDB stores user accounts, conversations, and chat messages.
+
+Q: What is Qdrant used for?
+A: Qdrant stores vector embeddings and allows the application to retrieve knowledge-base information based on semantic similarity.
+
+Q: What is RAG?
+A: Retrieval-Augmented Generation retrieves relevant information from a knowledge source and supplies it to an AI model to help generate an answer.
+
+Q: What is FastEmbed?
+A: FastEmbed generates vector embeddings from text so that text can be searched by semantic similarity.
+
+Q: Can users access previous conversations?
+A: The application stores conversations in MongoDB and provides conversation history for authenticated users.
+
+Q: Why is authentication important?
+A: Authentication identifies users and helps ensure that users can access only their own protected conversations.

@@ -1,0 +1,26 @@
+
+Jiya AI Chatbot Project Features
+
+1. User Authentication:
+Users can register and log in securely. Protected API endpoints require an authentication token.
+
+2. Chat Flow:
+Users can send messages and receive AI-generated responses through the chatbot interface.
+
+3. Persistent Conversations:
+Chat conversations and messages are stored in MongoDB so users can access their previous chats.
+
+4. Conversation Management:
+Users can create new conversations, view conversation history, rename conversations, and delete conversations.
+
+5. Conversation Date Grouping:
+The frontend groups conversations into categories such as Today, Yesterday, Previous 7 Days, and Older.
+
+6. AI Responses:
+The backend uses the Groq API to generate AI responses and can use previous messages as conversation context.
+
+7. Retrieval-Augmented Generation:
+Qdrant stores vectors representing knowledge-base text. Relevant text can be retrieved to provide additional context for AI answers.
+
+8. Frontend and Backend:
+The frontend uses React and Vite. The backend uses FastAPI and Pydantic schemas.
