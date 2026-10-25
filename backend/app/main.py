@@ -1,4 +1,5 @@
 
+import os
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
@@ -32,12 +33,20 @@ app = FastAPI(
 )
 
 
+allowed_origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+frontend_url = os.getenv("FRONTEND_URL")
+
+if frontend_url:
+    allowed_origins.append(frontend_url.rstrip("/"))
+
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-    ],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -56,8 +65,8 @@ def health_check():
     return {"status": "ok"}
 
 
-# Existing chat APIs
+# Chat APIs
 app.include_router(chat_router, prefix="/api")
 
-# New Register and Login APIs
+# Register and Login APIs
 app.include_router(auth_router, prefix="/api")
