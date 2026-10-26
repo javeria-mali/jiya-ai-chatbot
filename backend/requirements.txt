@@ -8,3 +8,4 @@ pydantic-settings
 groq
 qdrant-client
 fastembed
+PyJWT==2.10.1
